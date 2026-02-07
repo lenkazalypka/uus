@@ -1,0 +1,84 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(14px);
+  background: rgb(247 247 248 / 72%);
+  border-bottom: 1px solid rgb(0 0 0 / 6%);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: 24px;
+}
+
+.logoMark {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.logoRest {
+  opacity: 0.9;
+  color: var(--text);
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.link {
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: rgb(0 0 0 / 72%);
+  transition: 0.2s ease;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.link:hover {
+  background: rgb(124 108 255 / 10%);
+  color: rgb(0 0 0 / 92%);
+}
+
+.active {
+  background: rgb(0 0 0 / 6%);
+  color: rgb(0 0 0 / 92%);
+  font-weight: 700;
+}
+
+@media (width <= 560px) {
+  .inner {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .nav {
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .link {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}

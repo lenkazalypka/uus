@@ -1,0 +1,83 @@
+[
+  {
+    "id": "c1",
+    "title": "Акварель: нежные цветы",
+    "category": "Рисование",
+    "price": 1490,
+    "cover": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80",
+    "description": "Освоишь базовые заливки, смешивание и композицию на примере букета.",
+    "videoUrl": "https://www.youtube.com/embed/1hHMwLxN6EM"
+  },
+  {
+    "id": "c2",
+    "title": "Макраме: панно для дома",
+    "category": "Макраме",
+    "price": 1990,
+    "cover": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80",
+    "description": "Узлы, натяжение и схема панно — чтобы получилось ровно и красиво.",
+    "videoUrl": "https://www.youtube.com/embed/2OEL4P1Rz04"
+  },
+  {
+    "id": "c3",
+    "title": "Вязание: шапка за вечер",
+    "category": "Вязание",
+    "price": 990,
+    "cover": "https://images.unsplash.com/photo-1520975958225-4c7d52f4c0c2?auto=format&fit=crop&w=900&q=80",
+    "description": "Подбор пряжи, резинка, убавки и аккуратный край.",
+    "videoUrl": "https://www.youtube.com/embed/6j2a5lq3cK4"
+  },
+  {
+    "id": "c4",
+    "title": "Бисер: браслет-цепочка",
+    "category": "Бисероплетение",
+    "price": 790,
+    "cover": "https://images.unsplash.com/photo-1602810318383-e2fd41a4cb70?auto=format&fit=crop&w=900&q=80",
+    "description": "Пошагово соберём браслет и закрепим фурнитуру.",
+    "videoUrl": "https://www.youtube.com/embed/0x1K0rXoV8E"
+  },
+  {
+    "id": "c5",
+    "title": "Скетчинг маркерами: город",
+    "category": "Рисование",
+    "price": 1690,
+    "cover": "https://images.unsplash.com/photo-1529429612779-c8e40ef2f36e?auto=format&fit=crop&w=900&q=80",
+    "description": "Линия, перспектива и цветовые акценты для быстрых скетчей.",
+    "videoUrl": "https://www.youtube.com/embed/vn9mMeWcgoM"
+  },
+  {
+    "id": "c6",
+    "title": "Вышивка: минималистичные цветы",
+    "category": "Вышивка",
+    "price": 1290,
+    "cover": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80",
+    "description": "Стежки, перенос рисунка и аккуратная изнанка.",
+    "videoUrl": "https://www.youtube.com/embed/0lqV7iV4JX4"
+  },
+  {
+    "id": "c7",
+    "title": "Глина: серёжки-капли",
+    "category": "Лепка",
+    "price": 1890,
+    "cover": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80",
+    "description": "Формы, запекание и покрытие для долговечности.",
+    "videoUrl": "https://www.youtube.com/embed/7Wk9zJx4p8k"
+  },
+  {
+    "id": "c8",
+    "title": "Свечи: соевый воск + аромат",
+    "category": "Свечеварение",
+    "price": 1590,
+    "cover": "https://images.unsplash.com/photo-1600520611035-84157ad4084d?auto=format&fit=crop&w=900&q=80",
+    "description": "Температуры, фитили и ароматизация без сюрпризов.",
+    "videoUrl": "https://www.youtube.com/embed/7p9WQ3xjR9o"
+  },
+  {
+    "id": "c9",
+    "title": "Плетение: корзинка из шнура",
+    "category": "Плетение",
+    "price": 1790,
+    "cover": "https://images.unsplash.com/photo-1615484477778-ca3b7791a6fe?auto=format&fit=crop&w=900&q=80",
+    "description": "Основание, стенки и идеальный край.",
+    "videoUrl": "https://www.youtube.com/embed/2vS_8GqkZcY"
+  }
+]

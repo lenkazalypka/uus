@@ -1,0 +1,21 @@
+.empty {
+  margin-top: 20px;
+  border-radius: 18px;
+  border: 1px dashed rgb(255 255 255 / 18%);
+  background: rgb(255 255 255 / 3%);
+  padding: 22px;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.desc {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.action {
+  margin-top: 14px;
+}

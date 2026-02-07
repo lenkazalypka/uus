@@ -1,0 +1,100 @@
+.top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 6px 0 14px;
+}
+
+.h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.search {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid #e6e6e6;
+  min-width: 260px;
+  outline: none;
+  background: rgb(255 255 255 / 90%);
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.search:focus {
+  border-color: #cfcfcf;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 18px;
+}
+
+.filter {
+  border: none;
+  background: #f1f1f1;
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.filter.active {
+  background: #111;
+  color: #fff;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  color: var(--muted);
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgb(124 108 255 / 20%);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.empty svg {
+  margin-bottom: 24px;
+  color: rgb(124 108 255 / 20%);
+  stroke-width: 1.5;
+}
+
+.empty h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.empty p {
+  font-size: 14px;
+}

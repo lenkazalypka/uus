@@ -1,0 +1,144 @@
+.wrap {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.card {
+  width: min(420px, 100%);
+  background: rgb(255 255 255 / 90%);
+  border: 1px solid rgb(0 0 0 / 6%);
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 18px 70px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(10px);
+}
+
+.header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.error {
+  background: rgb(239 68 68 / 12%);
+  color: #7f1d1d;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.input {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgb(0 0 0 / 10%);
+  background: rgb(255 255 255 / 90%);
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.forgot {
+  text-align: right;
+}
+
+.forgotLink {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+}
+
+.submitButton {
+  padding: 14px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: white;
+  font-weight: 700;
+  border: none;
+  font-size: 16px;
+  transition: 0.2s ease;
+  box-shadow: 0 10px 30px rgb(124 108 255 / 25%);
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 8px;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgb(124 108 255 / 35%);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.switchButton {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 0;
+}
+
+.switchButton:hover {
+  text-decoration: underline;
+}

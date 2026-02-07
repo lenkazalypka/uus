@@ -1,0 +1,121 @@
+.wrap {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.card {
+  width: min(720px, 100%);
+  background: rgb(255 255 255 / 90%);
+  border: 1px solid rgb(0 0 0 / 6%);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 18px 70px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(10px);
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgb(124 108 255 / 20%);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgb(34 197 94 / 12%);
+  color: #166534;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.badgeFail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgb(239 68 68 / 12%);
+  color: #7f1d1d;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.title {
+  margin: 14px 0 8px;
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.text {
+  margin: 0 0 18px;
+  color: rgb(0 0 0 / 72%);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: #111827;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgb(0 0 0 / 18%);
+  font-size: 14px;
+  transition: transform 0.2s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.primary:hover {
+  transform: translateY(-1px);
+}
+
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: rgb(17 24 39 / 6%);
+  color: #111827;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid rgb(0 0 0 / 6%);
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+.secondary:hover {
+  transform: translateY(-1px);
+}

@@ -1,0 +1,22 @@
+.masonry {
+  margin-top: 18px;
+  column-count: 3;
+  column-gap: 16px;
+}
+
+.masonry > * {
+  break-inside: avoid;
+  margin-bottom: 16px;
+}
+
+@media (width <= 980px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (width <= 560px) {
+  .masonry {
+    column-count: 1;
+  }
+}

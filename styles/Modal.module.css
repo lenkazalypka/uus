@@ -1,0 +1,55 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.clickCatcher {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 55%);
+  border: none;
+}
+
+.modal {
+  position: relative;
+  width: min(560px, 100%);
+  border-radius: 18px;
+  border: 1px solid rgb(255 255 255 / 12%);
+  background: rgb(16 20 33 / 92%);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 14px 12px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.title {
+  font-weight: 700;
+}
+
+.close {
+  border: 1px solid var(--line);
+  background: rgb(255 255 255 / 6%);
+  border-radius: 12px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.close:hover {
+  background: rgb(255 255 255 / 8%);
+}
+
+.body {
+  padding: 16px;
+}

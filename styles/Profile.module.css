@@ -1,0 +1,244 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 24px;
+  background: rgb(255 255 255 / 86%);
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 26px;
+  box-shadow: 0 18px 60px rgb(0 0 0 / 10%);
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: white;
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.name {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.email {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.role {
+  margin-top: 8px;
+}
+
+.roleBadge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 8%);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.roleBadge.author {
+  background: rgb(124 108 255 / 15%);
+  color: var(--accent);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.addButton {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s ease;
+  box-shadow: 0 10px 30px rgb(124 108 255 / 25%);
+}
+
+.addButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgb(124 108 255 / 35%);
+}
+
+.logoutButton {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 8%);
+  color: var(--text);
+  font-weight: 700;
+  border: 1px solid rgb(0 0 0 / 10%);
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.logoutButton:hover {
+  background: rgb(0 0 0 / 12%);
+  transform: translateY(-2px);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.stat {
+  background: rgb(255 255 255 / 86%);
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.statLabel {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 28px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgb(0 0 0 / 8%);
+}
+
+.tab {
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  background: rgb(0 0 0 / 4%);
+}
+
+.tab.active {
+  background: rgb(124 108 255 / 10%);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.content {
+  margin-top: 24px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.empty svg {
+  margin-bottom: 24px;
+  color: rgb(124 108 255 / 20%);
+  stroke-width: 1.5;
+}
+
+.empty h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.empty p {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.emptyButton {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgb(124 108 255 / 10%);
+  border: 1px solid rgb(124 108 255 / 22%);
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.emptyButton:hover {
+  transform: translateY(-2px);
+  background: rgb(124 108 255 / 15%);
+}
+
+@media (width <= 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}

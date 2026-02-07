@@ -1,0 +1,28 @@
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.tab {
+  border-radius: 999px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: rgb(255 255 255 / 4%);
+  color: var(--muted);
+  cursor: pointer;
+  transition: 160ms ease;
+}
+
+.tab:hover {
+  color: var(--text);
+  background: rgb(255 255 255 / 6%);
+  transform: translateY(-1px);
+}
+
+.active {
+  color: white;
+  background: rgb(124 58 237 / 95%);
+  border-color: rgb(124 58 237 / 55%);
+}

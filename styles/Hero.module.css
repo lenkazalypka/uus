@@ -1,0 +1,145 @@
+.hero {
+  padding: 120px 18px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 500px at 15% 20%, rgb(124 108 255 / 18%) 0%, transparent 60%),
+    radial-gradient(800px 500px at 85% 15%, rgb(255 122 191 / 15%) 0%, transparent 60%);
+  z-index: -1;
+}
+
+.inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgb(124 108 255 / 12%);
+  border: 1px solid rgb(124 108 255 / 20%);
+  letter-spacing: 0.02em;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0;
+  font-size: 72px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.gradient {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+.text {
+  margin: 20px auto 0;
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.primary {
+  padding: 16px 32px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 20px 60px rgb(124 108 255 / 30%);
+  font-weight: 800;
+  transition: 0.25s ease;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 30px 80px rgb(124 108 255 / 40%);
+}
+
+.secondary {
+  padding: 16px 32px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 90%);
+  border: 1px solid rgb(0 0 0 / 10%);
+  color: var(--text);
+  font-weight: 700;
+  transition: 0.25s ease;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+
+.secondary:hover {
+  transform: translateY(-2px);
+  background: white;
+  box-shadow: 0 20px 60px rgb(0 0 0 / 10%);
+}
+
+@media (width <= 768px) {
+  .hero {
+    padding: 80px 18px 60px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
