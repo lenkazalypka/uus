@@ -5,27 +5,31 @@ import { supabase } from '../../lib/supabaseClient'
 import { fetchCourseById, createPurchase } from '../../lib/api'
 import styles from '../../styles/CoursePage.module.css'
 
-// Функция для безопасного извлечения embed URL из любого формата
+// Упрощенная и надежная функция извлечения URL
 const getEmbedUrl = (input) => {
   if (!input) return null;
-  
-  // Если это уже прямой embed URL вида rutube.ru/play/embed/
-  if (input.includes('rutube.ru/play/embed/')) {
+  console.log('Исходный код видео:', input); // Для отладки
+
+  // 1. Если это уже прямой embed URL (начинается с http)
+  if (input.startsWith('http') && input.includes('rutube.ru/play/embed/')) {
     return input.trim();
   }
-  
-  // Если вставлен полный iframe, извлекаем src
+
+  // 2. Если это полный iframe, извлекаем src
   if (input.includes('<iframe')) {
-    const srcMatch = input.match(/src=['"]([^'"]+)['"]/);
-    if (srcMatch) return srcMatch[1];
+    // Находим src='...' или src="..."
+    const srcMatch = input.match(/src\s*=\s*['"]([^'"]+)['"]/);
+    if (srcMatch && srcMatch[1]) {
+      return srcMatch[1].trim();
+    }
   }
-  
-  // Если это обычная ссылка на видео, пытаемся преобразовать
-  if (input.includes('rutube.ru/video/')) {
-    const match = input.match(/video\/([a-zA-Z0-9]+)/);
-    if (match) return `https://rutube.ru/play/embed/${match[1]}`;
+
+  // 3. Если это старая ссылка на страницу видео (/video/...)
+  const oldUrlMatch = input.match(/rutube\.ru\/video\/([a-zA-Z0-9]+)/);
+  if (oldUrlMatch && oldUrlMatch[1]) {
+    return `https://rutube.ru/play/embed/${oldUrlMatch[1]}`;
   }
-  
+
   return null;
 };
 
@@ -58,7 +62,7 @@ export default function CoursePage() {
         const currentUser = data?.session?.user
         setUser(currentUser)
 
-        // Проверяем покупку напрямую в базе данных
+        // Проверяем покупку
         if (currentUser) {
           const { data: purchase } = await supabase
             .from('purchases')
@@ -118,8 +122,9 @@ export default function CoursePage() {
     return `${price.toLocaleString('ru-RU')} ₽`
   }
 
-  // Получаем embed URL из сохраненного кода
+  // Получаем embed URL
   const embedUrl = getEmbedUrl(course.video_embed_code)
+  console.log('Извлеченный embedUrl:', embedUrl); // Для отладки
 
   return (
     <>
@@ -182,12 +187,27 @@ export default function CoursePage() {
                   allowFullScreen
                   title={`Видео курса: ${course.title}`}
                   style={{ borderRadius: '8px', border: 'none' }}
+                  // Ключевое изменение! Помогает с авторизацией на RuTube
+                  referrerPolicy="no-referrer-when-downgrade"
+                  // Дополнительные параметры для стабильности
+                  sandbox="allow-same-origin allow-scripts allow-popups allow-presentation"
                 />
+                {/* Отладочная информация (можно убрать после теста) */}
+                <div style={{ fontSize: '12px', color: '#666', marginTop: '8px' }}>
+                  Embed URL: {embedUrl.length > 80 ? embedUrl.substring(0, 80) + '...' : embedUrl}
+                </div>
               </div>
             ) : (
               <div style={{ background: '#fff', padding: 28, borderRadius: 12 }}>
                 <h3>Видео не задано</h3>
                 <p>Автор ещё не загрузил видео или указан некорректный код</p>
+                <p style={{ fontSize: '14px', color: '#888' }}>
+                  Код в базе: {course.video_embed_code ? 
+                    (course.video_embed_code.length > 100 ? 
+                      course.video_embed_code.substring(0, 100) + '...' : 
+                      course.video_embed_code) : 
+                    'пусто'}
+                </p>
               </div>
             )
           ) : (
